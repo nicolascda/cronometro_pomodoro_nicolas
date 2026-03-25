@@ -5,20 +5,20 @@ export function Menu()
 {
     return( 
         <>
-            <div className={styles.menu}>  
+            <nav className={styles.menu}>  
                 <a href="#" className={styles.menuLink}>
-                    <HistoryIcon className={styles.menuBorder}/>
+                    <HistoryIcon />
                 </a>
                 <a href="#" className={styles.menuLink}>
-                    <SettingsIcon className={styles.menuBorder}/>
+                    <SettingsIcon />
                 </a>
                 <a href="#" className={styles.menuLink}>
-                    <HomeIcon className={styles.menuBorder}/>
+                    <HomeIcon />
                 </a>
                 <a href="#" className={styles.menuLink}>
-                    <SunIcon className={styles.menuBorder}/>
+                    <SunIcon />
                 </a>
-            </div>
+            </nav>
         </>
     );
 }

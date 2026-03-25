@@ -1,0 +1,52 @@
+/* .cyclesDiv {
+    display: inline-flex;
+    gap: 1rem;
+
+}
+
+.cyclesVerde {
+    fill: lightgreen;
+    color: lightgreen;
+}
+
+.cyclesAmarelo {
+    fill: yellow;
+    color: yellow;
+}
+
+.cyclesAzul {
+    fill:   #0ea5e9;
+    color: #0ea5e9;
+} */
+
+.cycles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+.cycleDots{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.cycleDot{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.workTime{
+    background: var(--warning);
+}
+
+.shortBreakTme{
+    background: var(--primary);
+}
+
+.longBreakTime
+{
+    background: var(--info)
+}

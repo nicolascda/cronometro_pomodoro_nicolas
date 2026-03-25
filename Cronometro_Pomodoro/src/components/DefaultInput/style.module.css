@@ -1,0 +1,39 @@
+.input {
+    text-align: center;
+    background-color: transparent;
+    border-left-style: none; 
+    border: 0.2rem solid transparent;
+    border-bottom: 0.2rem solid var(--primary);
+    color: var(--text-default);
+    outline: none;
+    /* width: 19rem; */
+    padding: 0.8rem;
+    transition: all 0.4s ease-in-out
+    
+}
+
+.input::placeholder{
+    text-align: center;
+    color: var(--gray-200);
+    font-size: 1.8rem;
+    font-style: italic;
+}
+
+.input:hover {
+    cursor: Pointer;
+}
+
+.input:focus::placeholder{
+    visibility: hidden;
+}
+
+.input:focus {
+    border-radius: 0.8rem;
+    border: 0.2rem solid var(--primary);
+    
+}
+
+.input:disabled {
+    border-bottom: 0.2rem solid var(--disabled);
+    color: var(--text-muted)
+}

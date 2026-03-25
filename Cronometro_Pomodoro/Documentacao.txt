@@ -1,2 +1,35 @@
 Documentação
 Documentação dos visionamentos
+
+Aula 18/03/2026
+Terminar ícones do menu com link
+Fazer o countdown
+Trabalhamos com o clamp. o clamp é uma estrutura que permite definir um tamanho mínimo de fonte 
+em seguida define o tamanho da width e um máximo e o máximo que a fonte pode aumentar.
+font-size: clamp(8rem, 30vw, 16rem)
+...rest(Spread Operator)
+Os três pontos chamados de spreed operators ou rest
+parameters(resto), depende de onde são usados, 
+eles desepenham alguns papeis.
+No Argumento da função (...rest): funciona como
+Rest. Pegue todas as propriedades que sobrarem que
+não id, type ou label e coloque as dentro de 
+um objeto chamado rest.
+No Elemento<input/>({...rest}): aqui ele funciona 
+como Spread ele pega todas as propriedades que estão 
+dentro do objeto rest e as espalhas como 
+atributos individuais do input.
+
+
+Fazer o formulário
+Fazer task
+Fazer input
+
+Fazer o cicle como cicle e escrever
+Olá do cicle no componente
+
+Configuração de Botão
+Fazer um componente chamado 
+DefaultButton
+e escrever olá do botão.
+abaixo de ciclos
