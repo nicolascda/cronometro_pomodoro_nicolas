@@ -1,0 +1,18 @@
+import styles from "./styles.module.css";
+
+type  = NomeComponenteProps{
+    children: React.ReactNode;
+}
+
+export function NomeComponente({children}: NomeComponenteProps)
+{
+    return (
+    <>
+        <div className={styles.classe do css}>
+            <div className={styles.classe do css}>
+                {children}
+            </div>
+        </div>
+    </> 
+    )
+}

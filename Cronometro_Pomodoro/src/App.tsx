@@ -8,14 +8,37 @@ import { DefaultInput } from "./components/DefaultInput";
 import { Cycles } from "./components/Cycles";
 import { DefaultButton } from "./components/DefaultButton";
 import { DefaultButtonExercicio } from "./components/DefaultButtonExercicio";
-import { PlayCircle, StopCircle } from "lucide-react"
+import { Footer} from "./components/Footer";
+import { Heading } from "./components/Heading";
+import { Fuel, Ghost, PlayCircle, StopCircle, ShieldCheck, Skull, Zap } from "lucide-react"
+import { useState } from "react"
 
 export function App() {
+  // let numero = 0;
+  const [numero, setNumero] = useState(0);
+
+  function handleClick()
+  {
+    const span = document.getElementById('numero');
+
+    if(!span) return;
+
+    setNumero(estadoAnterior => estadoAnterior + 1);
+    span.innerText = numero.toString();
+    console.log(numero, Date.now());
+  }
+  
   return (
     <>
+      <Heading> 
+        Numero: <span id='numero'>{numero}</span>
+      </Heading>
+      <button onClick={ handleClick}> Aumenta</button>
+
       <Container>
         <Logo/>
       </Container>
+
       <Container>
         <Menu/>
       </Container>
@@ -29,7 +52,12 @@ export function App() {
         <form className = 'form' action="">
 
           <div className="formRow">
-           <DefaultInput labelText="Task" id="meuInput" type="text" placeholder="Estudar"/>
+           <DefaultInput 
+            labelText={numero.toString()} 
+            id="meuInput" 
+            type="text" 
+            placeholder="Estudar"
+            />
           </div>
 
           <div className="formRow">
@@ -53,11 +81,11 @@ export function App() {
           
           <div className="formRow">
             <div>
-              <DefaultButtonExercicio icon={<PlayCircle/>} color="green" />
-            <DefaultButtonExercicio icon={<PlayCircle/>} color="red" />
-            <DefaultButtonExercicio icon={<PlayCircle/>} color="yellow" />
-            <DefaultButtonExercicio icon={<PlayCircle/>} color="blue" />
-            <DefaultButtonExercicio icon={<PlayCircle/>} color="ghost" />
+              <DefaultButtonExercicio icon={<Zap/>} color="green" />
+              <DefaultButtonExercicio icon={<Skull/>} color="red" />
+              <DefaultButtonExercicio icon={<Fuel/>} color="yellow" />
+              <DefaultButtonExercicio icon={<ShieldCheck/>} color="blue" />
+              <DefaultButtonExercicio icon={<Ghost/>} color="ghost" />
 
             </div>
             
@@ -65,6 +93,9 @@ export function App() {
 
         </form>
       </Container>      
+      <Container>
+        <Footer/>
+      </Container>
     </>
   )
 }
